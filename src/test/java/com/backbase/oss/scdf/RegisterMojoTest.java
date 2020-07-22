@@ -35,7 +35,7 @@ public class RegisterMojoTest {
 
         MavenProject mavenProject = new MavenProject();
         mavenProject.setBuild(new Build());
-        mavenProject.setGroupId("com.backbase.stream");
+        mavenProject.setGroupId("com.backbase.oss.scdf");
         mavenProject.setArtifactId("stream-transaction-generate-mock-processor");
         mavenProject.setVersion("1.0.0-SNAPSHOT");
 
@@ -44,7 +44,7 @@ public class RegisterMojoTest {
         registerMojo.dataflowUrl = new URL("http://localhost:" + PORT);
         registerMojo.force = true;
         registerMojo.appUri = "docker:/my-registry/appname:1.0.0-SNAPSHOT";
-        registerMojo.mavenMetadata = "maven://com.backbase.stream:appname:jar:metadata:1.0.0-SNAPSHOT";
+        registerMojo.mavenMetadata = "maven://com.backbase.oss.scdf:appname:jar:metadata:1.0.0-SNAPSHOT";
 
         registerMojo.execute();
 
@@ -60,7 +60,7 @@ public class RegisterMojoTest {
 
         MavenProject mavenProject = new MavenProject();
         mavenProject.setBuild(new Build());
-        mavenProject.setGroupId("com.backbase.stream");
+        mavenProject.setGroupId("com.backbase.oss.scdf");
         mavenProject.setArtifactId("stream-transaction-generate-mock-processor");
         mavenProject.setVersion("1.0.0-SNAPSHOT");
 
@@ -71,7 +71,7 @@ public class RegisterMojoTest {
         registerMojo.dataflowUrl = new URL("http://localhost:" + PORT);
         registerMojo.force = true;
         registerMojo.appUri = "docker:/my-registry/appname:1.0.0-SNAPSHOT";
-        registerMojo.mavenMetadata = "maven://com.backbase.stream:appname:jar:metadata:1.0.0-SNAPSHOT";
+        registerMojo.mavenMetadata = "maven://com.backbase.oss.scdf:appname:jar:metadata:1.0.0-SNAPSHOT";
         registerMojo.execute();
 
         verify(exactly(1), postRequestedFor(urlEqualTo(TEST_APP_URL)));
@@ -84,7 +84,7 @@ public class RegisterMojoTest {
 
         MavenProject mavenProject = new MavenProject();
         mavenProject.setBuild(new Build());
-        mavenProject.setGroupId("com.backbase.stream");
+        mavenProject.setGroupId("com.backbase.oss.scdf");
         mavenProject.setArtifactId("stream-transaction-generate-mock-processor");
         mavenProject.setVersion("1.0.0-SNAPSHOT");
 

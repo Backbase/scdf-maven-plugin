@@ -59,8 +59,8 @@ After adding the plugins, add a profile with the desired Stream configuration fo
                 <pluginManagement>
                     <plugins>
                         <plugin>
-                            <groupId>com.backbase.stream</groupId>
-                            <artifactId>stream-maven-plugin</artifactId>
+                            <groupId>com.backbase.oss</groupId>
+                            <artifactId>scdf-maven-plugin</artifactId>
                             <configuration>
                                 <dataflowUrl>${stream.dataflow.url}</dataflowUrl>
                                 <dataflowUsername>${stream.dataflow.username}</dataflowUsername>
