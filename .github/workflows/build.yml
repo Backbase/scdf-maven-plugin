@@ -2,7 +2,9 @@ name:  SCDF Maven Plugin
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - "**"
   pull_request:
     branches: [ master ]
 
@@ -57,14 +59,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-#      - name: Sending new BOAT into the Maven Ocean
-#        if: contains(github.ref, 'master')
-#        uses: samuelmeuli/action-maven-publish@v1
-#        with:
-#          gpg_private_key: ${{ secrets.gpg_private_key }}
-#          gpg_passphrase: ${{ secrets.gpg_passphrase }}
-#          nexus_username: ${{ secrets.nexus_username }}
-#          nexus_password: ${{ secrets.nexus_password }}
+      - name: Sending new BOAT into the Maven Ocean
+        if: contains(github.ref, 'master')
+        uses: samuelmeuli/action-maven-publish@v1
+        with:
+          gpg_private_key: ${{ secrets.gpg_private_key }}
+          gpg_passphrase: ${{ secrets.gpg_passphrase }}
+          nexus_username: ${{ secrets.nexus_username }}
+          nexus_password: ${{ secrets.nexus_password }}
 
       - name: Commit files
         if: contains(github.ref, 'master')
