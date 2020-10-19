@@ -16,7 +16,7 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v2
 
-      - nameL: Setup Build Cache
+      - name: Setup Build Cache
         uses: actions/cache@v1
         with:
           path: ~/.m2/repository
