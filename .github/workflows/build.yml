@@ -64,7 +64,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 
-      - name: Sending new BOAT into the Maven Ocean
+      - name: Publishing SCDF
         if: contains(github.ref, 'master')
         uses: samuelmeuli/action-maven-publish@v1
         with:
