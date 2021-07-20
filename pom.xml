@@ -5,7 +5,7 @@
 
     <groupId>com.backbase.oss</groupId>
     <artifactId>scdf-maven-plugin</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <version>0.2.0</version>
     <packaging>maven-plugin</packaging>
     <description>The scdf-maven-plugin can be used to register applications in Spring Cloud Data Flow.</description>
 
